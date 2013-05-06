@@ -1,22 +1,29 @@
 
-public class main {
+public class Main {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		Colecao c = new Colecao(10);
-		for(int i =0;i<30;i++){
+		Colecao  c = new Colecao(10);
+		int ad=30;
+		for(int i =0;i<ad;i++){
 			c.add("N"+i);
 		}
-		for(int i =0;i<30;i++){
-			try {
-				System.out.print(c.get(i)+", ");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println(e.getMessage());
-			}
+		for(int i =0;i<ad;i++){
+			System.out.print(c.get(i)+", ");
 		}
+		System.out.println("");
+		c.addInicio("N 3");
+		c.addInicio("N 8");
+		c.addInicio("N 12");
+		c.println();
+		System.out.println("");
+		c.add("N 100", 1);
+		c.println();
+		System.out.println("");
+		c.removerInicio();
+		c.println();		System.out.println("");
+		c.remover(2);
+		c.println();
+		
 
 	}
 
